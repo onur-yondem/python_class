@@ -6,24 +6,28 @@ class QuestionCountError(Error):
 
 
 class Ogrenci:
-    def __init__(self, ogrenci_adi,ogrenci_soyadi,ogrenci_sinifi):
+
+    def __init__(self, ogrenci_adi, ogrenci_soyadi, ogrenci_sinifi):
         self.ogrenciAdi = ogrenci_adi
         self.ogrenciSoyadi = ogrenci_soyadi
         self.ogrenciSinif = ogrenci_sinifi
 
-    def printStudenScore(self):
+    def print_student_score(self):
         print(f"Öğrenci Adı: {self.ogrenciAdi} \n Öğrenci Soyadı: {self.ogrenciSoyadi} \n Öğrenci Sınıfı: {self.ogrenciSinif}")
 
 class Soru:
-    @staticmethod
-    def NetSayisi(correct_answer,wrong_answer):
+
+    def net_sayisi(correct_answer, wrong_answer):
         try:
-            if isinstance(correct_answer,int) and isinstance(wrong_answer,int):
+            if isinstance(correct_answer, int) and isinstance(wrong_answer, int):
                 if correct_answer + wrong_answer == 50:
                     total_correct_answer = correct_answer - int(wrong_answer / 4)
+
                     return total_correct_answer
+
                 else:
                     raise QuestionCountError
+
             else:
                 raise TypeError
 
@@ -33,17 +37,18 @@ class Soru:
         except(TypeError):
             print("Girilen değerler integer olmalıdır")
 
-    @staticmethod
     def Hesapla(net_sayisi):
         try:
             score = net_sayisi * 2
             print("Puan: " + str(score))
+
         except TypeError:
             print("Girilen değerler integer olmalıdır")
 
+
 ogrenci1 = Ogrenci("Onur","Yöndem","5")
-ogrenci1.printStudenScore()
-Soru.Hesapla(Soru.NetSayisi(30,20))
+ogrenci1.print_student_score()
+Soru.Hesapla(Soru.net_sayisi(30,20))
 
 
 
