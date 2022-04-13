@@ -1,4 +1,5 @@
 class Insan:
+
     def __init__(self):
         self.ad = "Onur"
         self.soyad = "Yöndem"
@@ -14,16 +15,19 @@ class Insan:
                          f"Ülke: {self.ulke} \n " \
                          f"Şehir: {self.sehir} \n " \
                          f"Yetenekler: {self.yetenekler}"
+
         print(kisi_bilgileri)
+
         return kisi_bilgileri
 
-    def yetenek_ekle(self,*abilities):
+    def yetenek_ekle(self, *abilities):
         for ability in abilities:
             self.yetenekler.append(ability)
 
         print(self.yetenekler)
+
         return self.yetenekler
 
 onur = Insan()
-onur.yetenek_ekle("python","bisiklet",21321,"sadada","")
+onur.yetenek_ekle("python", "bisiklet",21321, "sadada", "")
 onur.kisi_bilgileri()
