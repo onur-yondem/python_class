@@ -46,9 +46,9 @@ class Soru:
             print("Girilen değerler integer olmalıdır")
 
 
-ogrenci1 = Ogrenci("Onur","Yöndem","5")
+ogrenci1 = Ogrenci("Onur", "Yöndem", "5")
 ogrenci1.print_student_score()
-Soru.Hesapla(Soru.net_sayisi(30,20))
+Soru.Hesapla(Soru.net_sayisi(30, 20))
 
 
 
