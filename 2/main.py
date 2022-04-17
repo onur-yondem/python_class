@@ -29,5 +29,5 @@ class Insan:
         return self.yetenekler
 
 onur = Insan()
-onur.yetenek_ekle("python", "bisiklet",21321, "sadada", "")
+onur.yetenek_ekle("python", "bisiklet", 21321, "sadada", "")
 onur.kisi_bilgileri()
